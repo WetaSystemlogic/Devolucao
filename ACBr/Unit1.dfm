@@ -791,9 +791,9 @@ object Form1: TForm1
           ParentFont = False
         end
         object sbtnEnviarNFe: TSpeedButton
-          Left = 624
+          Left = 664
           Top = 6
-          Width = 248
+          Width = 208
           Height = 99
           Caption = 'Enviar'
           Flat = True
@@ -4252,6 +4252,7 @@ object Form1: TForm1
     MostrarStatus = True
     TipoDANFE = tiSemGeracao
     NumCopias = 1
+    AgruparNumCopias = False
     ImprimeNomeFantasia = False
     ImprimirDescPorc = False
     ImprimirTotalLiquido = False
@@ -4301,6 +4302,7 @@ object Form1: TForm1
     MostrarStatus = True
     TipoDANFE = tiRetrato
     NumCopias = 1
+    AgruparNumCopias = False
     ImprimeNomeFantasia = False
     ImprimirDescPorc = False
     ImprimirTotalLiquido = True
@@ -4342,6 +4344,7 @@ object Form1: TForm1
     MostrarStatus = True
     TipoDANFE = tiSemGeracao
     NumCopias = 1
+    AgruparNumCopias = False
     ImprimeNomeFantasia = True
     ImprimirDescPorc = True
     ImprimirTotalLiquido = True
