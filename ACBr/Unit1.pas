@@ -958,13 +958,13 @@ end;
 
 procedure TForm1.NCMKeyPress(Sender: TObject; var Key: Char);
 begin
-  if not (Key in ['0'..'9', #8, #13,',',#9, #67, #17]) then
+  if not (Key in ['0'..'9', #8, #13,',',#9, #67, #17, #86, #118]) then
   Key := #0;
 end;
 
 procedure TForm1.sbtnCalcularClick(Sender: TObject);
 begin
-  ValorTotalNota.Text :=  FormatFloat('###,###,##0.0000',(StrToFloat(dbeTotalvProd.Text) +  StrToFloat(dbeTotalvFrete.Text) +
+  ValorTotalNota.Text :=  FormatFloat('####,##0.0000',(StrToFloat(dbeTotalvProd.Text) +  StrToFloat(dbeTotalvFrete.Text) +
   StrToFloat(dbeTotalvIPI.Text) + StrToFloat(dbeTotalvOutros.Text)) - StrToFloat(dbeTotalvDesc.Text));
 end;
 
@@ -1431,7 +1431,7 @@ begin
     pICMS.Text :=  '0';
 
   if vBC.Text <> '' then
-    vICMS.Text  :=  FormatFloat('#,##0.00',StrToFloat(pICMS.Text)/100 * StrToFloat(vBC.Text));
+    vICMS.Text  :=  FormatFloat('####,##0.0000',StrToFloat(pICMS.Text)/100 * StrToFloat(vBC.Text));
 
 end;
 
@@ -1447,7 +1447,7 @@ begin
     pIPI.Text :=  '0';
 
   if IPIvBC.Text <> '' then
-    vIPI.Text :=  FormatFloat('#,##0.00',StrToFloat(pIPI.Text)/100 * StrToFloat(IPIvBC.Text));
+    vIPI.Text :=  FormatFloat('####,##0.0000',StrToFloat(pIPI.Text)/100 * StrToFloat(IPIvBC.Text));
 end;
 
 procedure TForm1.pIPIKeyPress(Sender: TObject; var Key: Char);
@@ -4213,7 +4213,7 @@ procedure TForm1.vProdEnter(Sender: TObject);
 begin
   //Gerar automaticamente o valor total do produto
   if (qCom.Text <> '') and (vUnCom.Text <> '') then
-    vProd.Text  :=  FormatFloat('#,##0.00', StrToFloat(qCom.Text) * StrToFloat(vUnCom.Text));
+    vProd.Text  :=  FormatFloat('####,##0.0000', StrToFloat(qCom.Text) * StrToFloat(vUnCom.Text));
 end;
 
 procedure TForm1.vProdKeyPress(Sender: TObject; var Key: Char);
